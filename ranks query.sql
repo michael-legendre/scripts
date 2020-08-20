@@ -1,3 +1,4 @@
+##creating class ranks and class percentile ranks for Pharm.D./PA programs 
 Create table new_ranks as(
 	Select stunum, gpa, pgmdesc, 
 rank() over (partition by pgmdesc, class order by gpa desc) as class_rank, 
